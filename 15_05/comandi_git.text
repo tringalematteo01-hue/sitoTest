@@ -1,0 +1,34 @@
+Dal terminale
+
+- git --version -> ci restituisce la versione di git installata sul pc
+
+
+
+COMANDI E A COSA SERVONO :
+
+Quando voglio inizializzare un progetto : 
+
+    - git init 
+
+
+Eseguo snapshot o "fotografia" del progetto in atto
+
+    - git add .    (aggiunge tutti i file alla foto)
+
+    - git commit -m "Implementata funzionalià pagamenti"   ( tra le stringhe va inserito il messaggio del commit )
+
+
+
+Dobbiamo andare su Github e creare una nuova repository (repo)
+
+Una volta creata copiare le ultime 3 stringhe della pagina, 
+che servono per inviare il codice del nostro progetto dal locale a github
+
+
+    ( 
+      git branch -M main 
+
+      git remote add origin ( il nome della repo )
+
+      git push -u orgin main
+    )

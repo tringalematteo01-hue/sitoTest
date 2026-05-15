@@ -1,0 +1,37 @@
+body {
+    background-color: coral;
+}
+
+.pippo_h1 {
+    color: green;
+}
+
+.pippo_h2 {
+    color: lime;
+}
+
+.no_linea {
+    text-decoration: none;
+}
+
+.section_form {
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.lbl {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: red;
+    height: 50px;
+    width: 80px;
+    border-radius: 8px;
+    color: white;
+}
+
+.btn:hover {
+    background-color: rgb(233, 224, 233);
+}

@@ -1,0 +1,352 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #000000;
+    font-family: 'Inter', 'Geist', sans-serif;
+    color: white;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    padding: 20px 0;
+    border-bottom: 1px solid #2A2D35;
+}
+
+.nav_link {
+    color: #aaa !important;
+    transition: 0.3s;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.nav_link:hover {
+    color: white !important;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background-color: #2A2D35;
+}
+
+.login_btn {
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    color: #aaa;
+    transition: 0.3s;
+    padding: 8px 16px;
+    border-radius: 999px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.login_btn:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn_learn {
+    background: transparent;
+    border: none;
+    border-radius: 999px;
+    transition: 0.3s;
+}
+
+.btn_learn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.font-geist {
+    font-family: 'Geist', sans-serif !important;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-transform: lowercase;
+}
+
+/* ===== HAMBURGER MENU ===== */
+.menu_toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    width: 30px;
+    height: 24px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 200;
+    position: relative;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
+    transform-origin: center;
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* ===== HERO ===== */
+.hero {
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: linear-gradient(
+        to bottom,
+        #000000 0%,
+        #1b1b1b 65%,
+        #2e2c2e 100%
+    );
+}
+
+.hero_title {
+    font-size: 52px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: white;
+    margin-top: 160px;
+}
+
+.hero_text {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+}
+
+.hero_image_wrapper {
+    width: 100%;
+}
+
+.hero_img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 50px 80px rgba(0, 0, 0, 0.6);
+    transform: translateY(10px);
+}
+
+/* ===== BLACK BAR ===== */
+.black_bar {
+    background: black;
+    padding: 30px 0;
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.bar_item {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 25px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.bar_item:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ===== CUSTOM CARDS ===== */
+.custom_card {
+    height: auto;
+    min-height: 400px;
+    width: 100%;
+    background-color: #17191d;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.custom_card:hover {
+    transform: scale(1.1);
+}
+
+.card_img {
+    width: 100%;
+    height: 250px;
+    background-color: #000000;
+    background-image: none;
+    object-fit: contain;
+    mix-blend-mode: screen;
+}
+
+.card_title {
+    margin-top: 10%;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    display: block;
+}
+
+.card_text {
+    font-size: 14px;
+    margin-left: 10px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.border-secondary {
+    border-color: #2A2D35 !important;
+}
+
+/* ===== FOOTER ===== */
+.footer_title {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer_list li {
+    margin-bottom: 12px;
+}
+
+.footer_list a {
+    color: #8a8b91;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer_list a:hover {
+    color: white;
+}
+
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background-color: #2A2D35;
+    margin-top: 80px;
+}
+
+/* ===== RESPONSIVE: HERO IMG ===== */
+@media (max-width: 768px) {
+    .hero_img {
+        height: 350px;
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* ===== RESPONSIVE: BORDER END (cards) ===== */
+@media (max-width: 767px) {
+    .border-end {
+        border-right: none !important;
+        border-bottom: 1px solid #2A2D35 !important;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+}
+
+/* ===== RESPONSIVE: FOOTER ===== */
+@media (max-width: 991px) {
+    .footer_title {
+        margin-top: 30px;
+    }
+}
+
+/* ===== RESPONSIVE: MOBILE GENERAL + HAMBURGER ===== */
+@media (max-width: 768px) {
+    
+    /* Hero */
+    .hero {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .hero_title {
+        font-size: 32px;
+        margin-top: 40px;
+        letter-spacing: -0.5px;
+    }
+
+    .hero_text {
+        font-size: 16px;
+    }
+
+    .bar_item {
+        font-size: 16px;
+    }
+
+    section h1 {
+        font-size: 28px;
+    }
+
+    /* Mostra hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Menu fullscreen overlay */
+    .nav_menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding: 40px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s ease-out;
+        z-index: 100;
+    }
+
+    /* Apri menu quando checkbox è checked */
+    .menu_toggle:checked ~ .nav_menu {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Link grandi quando menu è aperto */
+    .menu_toggle:checked ~ .nav_menu .nav_link {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .menu_toggle:checked ~ .nav_menu .login_btn {
+        font-size: 20px;
+    }
+
+    /* Nascondi il divider verticale su mobile */
+    .divider {
+        display: none;
+    }
+
+    /* Animazione hamburger → X */
+    .menu_toggle:checked ~ .hamburger span:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .menu_toggle:checked ~ .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu_toggle:checked ~ .hamburger span:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+}

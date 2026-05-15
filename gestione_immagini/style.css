@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 1200px;
+}
+
+
+.cnt {
+    height: 300px;
+    width: 350px;
+}
+
+
+.container_image {
+    background-image: url("https://img.freepik.com/vettori-premium/casa-disegnata-con-un-concetto-di-comfort-e-costruzione-domestica-a-una-linea_165079-3093.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: cover; /* l'img avvolge il container*/
+    background-repeat: no-repeat;/* non ripete più volre l'img nel container */
+    background-position: center;
+}
+
+
+.container_image2 {
+    background-image: url("https://img.freepik.com/vettori-premium/casa-disegnata-con-un-concetto-di-comfort-e-costruzione-domestica-a-una-linea_165079-3093.jpg?semt=ais_hybrid&w=740&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
