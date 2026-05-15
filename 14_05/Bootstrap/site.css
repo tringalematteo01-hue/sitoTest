@@ -1,3 +1,9 @@
+/* ============================================
+   SITE.CSS — Linear-style landing page
+   Author: [il tuo nome]
+   ============================================ */
+
+
 /* ===== RESET ===== */
 * {
     margin: 0;
@@ -12,7 +18,10 @@ body {
     color: white;
 }
 
-/* ===== NAVBAR ===== */
+
+/* ============================================
+   NAVBAR
+   ============================================ */
 .navbar {
     padding: 20px 0;
     border-bottom: 1px solid #2A2D35;
@@ -32,12 +41,14 @@ body {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
+/* Separatore verticale tra link e bottoni */
 .divider {
     width: 1px;
     height: 20px;
     background-color: #2A2D35;
 }
 
+/* Bottone Login (link stilizzato come pill button) */
 .login_btn {
     font-size: 14px;
     background: transparent;
@@ -55,6 +66,7 @@ body {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
+/* Bottone "Learn More" del hero */
 .btn_learn {
     background: transparent;
     border: none;
@@ -66,6 +78,7 @@ body {
     background-color: rgba(255, 255, 255, 0.15);
 }
 
+/* Font Geist (utility class) */
 .font-geist {
     font-family: 'Geist', sans-serif !important;
     font-weight: 600;
@@ -73,11 +86,18 @@ body {
     text-transform: lowercase;
 }
 
-/* ===== HAMBURGER MENU ===== */
+
+/* ============================================
+   HAMBURGER MENU (CSS-only, no JS)
+   Utilizza il "checkbox hack" per gestire lo stato
+   ============================================ */
+
+/* Checkbox nascosta — cuore del menu mobile */
 .menu_toggle {
     display: none;
 }
 
+/* Icona hamburger (3 linee) - nascosta su desktop */
 .hamburger {
     display: none;
     width: 30px;
@@ -99,13 +119,17 @@ body {
     transform-origin: center;
 }
 
+/* Menu navigazione (default: layout desktop inline) */
 .nav_menu {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-/* ===== HERO ===== */
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
 .hero {
     min-height: 100vh;
     padding-top: 80px;
@@ -145,7 +169,10 @@ body {
     transform: translateY(10px);
 }
 
-/* ===== BLACK BAR ===== */
+
+/* ============================================
+   BLACK BAR — brand showcase
+   ============================================ */
 .black_bar {
     background: black;
     padding: 30px 0;
@@ -167,7 +194,10 @@ body {
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* ===== CUSTOM CARDS ===== */
+
+/* ============================================
+   FEATURE CARDS
+   ============================================ */
 .custom_card {
     height: auto;
     min-height: 400px;
@@ -204,11 +234,15 @@ body {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* Override colore bordi Bootstrap */
 .border-secondary {
     border-color: #2A2D35 !important;
 }
 
-/* ===== FOOTER ===== */
+
+/* ============================================
+   FOOTER
+   ============================================ */
 .footer_title {
     color: white;
     font-size: 14px;
@@ -238,7 +272,10 @@ body {
     margin-top: 80px;
 }
 
-/* ===== RESPONSIVE: HERO IMG ===== */
+
+/* ============================================
+   RESPONSIVE — HERO IMAGE (tablet/mobile)
+   ============================================ */
 @media (max-width: 768px) {
     .hero_img {
         height: 350px;
@@ -246,9 +283,12 @@ body {
     }
 }
 
-/* ===== RESPONSIVE: BORDER END (cards) ===== */
 
-/* ===== RESPONSIVE: FOOTER ===== */
+/* ============================================
+   RESPONSIVE — FOOTER (tablet/mobile)
+   Spazio extra sopra ai titoli quando le colonne
+   si impilano in verticale
+   ============================================ */
 @media (max-width: 991px) {
     .footer_title {
         margin-top: 30px;
@@ -256,16 +296,13 @@ body {
 }
 
 
-@media (min-width) {
-    .nav_menu {
-        transition: none !important;
-    }
-}
-
-/* ===== RESPONSIVE: MOBILE GENERAL + HAMBURGER ===== */
+/* ============================================
+   RESPONSIVE — MOBILE GENERAL + HAMBURGER
+   Breakpoint principale per mobile (<= 768px)
+   ============================================ */
 @media (max-width: 768px) {
-    
-    /* Hero */
+
+    /* ----- Hero su mobile ----- */
     .hero {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -281,20 +318,23 @@ body {
         font-size: 16px;
     }
 
+    /* ----- Brand showcase su mobile ----- */
     .bar_item {
         font-size: 16px;
     }
 
+    /* ----- Titoli sezioni su mobile ----- */
     section h1 {
         font-size: 28px;
     }
 
-    /* Mostra hamburger */
+    /* ----- Mostra hamburger icon ----- */
     .hamburger {
         display: flex;
     }
 
-    /* Menu fullscreen overlay */
+    /* ----- Menu fullscreen overlay ----- */
+    /* Stato nascosto di default (mobile) */
     .nav_menu {
         position: fixed;
         top: 0;
@@ -311,17 +351,18 @@ body {
         padding: 40px;
         opacity: 0;
         visibility: hidden;
-        transition: 0.4s ease-out;
         z-index: 100;
     }
 
-    /* Apri menu quando checkbox è checked */
+    /* Apertura menu: si attiva quando la checkbox
+       nascosta viene "spuntata" cliccando l'hamburger */
     .menu_toggle:checked ~ .nav_menu {
         opacity: 1;
         visibility: visible;
+        animation: menuOpen 0.4s ease-out forwards;
     }
 
-    /* Link grandi quando menu è aperto */
+    /* Ingrandisce i link quando il menu è aperto */
     .menu_toggle:checked ~ .nav_menu .nav_link {
         font-size: 28px;
         font-weight: 600;
@@ -331,21 +372,41 @@ body {
         font-size: 20px;
     }
 
-    /* Nascondi il divider verticale su mobile */
+    /* Nasconde il divider verticale (non ha senso in colonna) */
     .divider {
         display: none;
     }
 
-    /* Animazione hamburger → X */
+    /* ----- Animazione hamburger → X ----- */
+    /* Linea 1: ruota e scende al centro */
     .menu_toggle:checked ~ .hamburger span:nth-child(1) {
         transform: translateY(10px) rotate(45deg);
     }
 
+    /* Linea 2: sparisce */
     .menu_toggle:checked ~ .hamburger span:nth-child(2) {
         opacity: 0;
     }
 
+    /* Linea 3: ruota in senso opposto e sale al centro */
     .menu_toggle:checked ~ .hamburger span:nth-child(3) {
         transform: translateY(-10px) rotate(-45deg);
+    }
+}
+
+
+/* ============================================
+   KEYFRAMES — animazione apertura menu mobile
+   Usata invece di transition per evitare flash
+   durante il resize del viewport
+   ============================================ */
+@keyframes menuOpen {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
     }
 }
