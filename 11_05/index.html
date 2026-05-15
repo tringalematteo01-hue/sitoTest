@@ -1,34 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
     <head>
+        <!-- ============================================= -->
+        <!-- META TAG: configurazione base della pagina    -->
+        <!-- ============================================= -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Prima pagina HTML</title>
     </head>
+
     <body>
+
+        <!-- ============================================= -->
+        <!-- SEZIONE 1: Titolo e paragrafo introduttivo    -->
+        <!-- ============================================= -->
         <h1>Titolo della Prima pagina HTML</h1>
-        <p>Lorem ipsum dolor, sit <strong>amet</strong> consectetur adipisicing elit. Enim unde soluta distinctio vero est neque ratione magnam, autem placeat numquam maiores tempora, ab ipsum mollitia harum esse, odit voluptates praesentium?</p>
+
+        <p>
+            Lorem ipsum dolor, sit <strong>amet</strong> consectetur adipisicing elit.
+            Enim unde soluta distinctio vero est neque ratione magnam, autem placeat
+            numquam maiores tempora, ab ipsum mollitia harum esse, odit voluptates
+            praesentium?
+        </p>
+
+        <!-- Esempio di testo in grassetto -->
         <strong>Grassetto</strong>
 
+        <!-- Linea di separazione orizzontale -->
         <hr>
 
-        <em>corsivo</em><strong>parola</strong>
+        <!-- Esempio di testo in corsivo + grassetto affiancati -->
+        <em>corsivo</em>
+        <strong>parola</strong>
 
-        <!-- Lista ordinata numerica -->
+
+        <!-- ============================================= -->
+        <!-- SEZIONE 2: Liste (ordinata e puntata)         -->
+        <!-- ============================================= -->
+
+        <!-- Lista ordinata numerica (1, 2, 3...) -->
         <ol>
             <li>Coffee</li>
             <li>Tea</li>
             <li>Milk</li>
         </ol>
 
-        <!-- Lista Puntale -->
+        <!-- Lista puntata (bullet points) -->
         <ul>
             <li>Coffee</li>
             <li>Tea</li>
             <li>Milk</li>
         </ul>
 
+
+        <!-- ============================================= -->
+        <!-- SEZIONE 3: Tabella con intestazione e dati    -->
+        <!-- ============================================= -->
         <table>
+
+            <!-- Intestazione tabella -->
             <thead>
                 <tr>
                     <th>Name</th>
@@ -37,6 +67,7 @@
                 </tr>
             </thead>
 
+            <!-- Corpo della tabella con i dati -->
             <tbody>
                 <tr>
                     <td>Matteo</td>
@@ -50,17 +81,26 @@
                     <td>35</td>
                 </tr>
             </tbody>
+
         </table>
-        
-        <img src="https://blog.giallozafferano.it/dulcisinforno/wp-content/uploads/2021/03/Carbonara-ricetta-5328.jpg" alt="">
-        <img src="https://blog.giallozafferano.it/dulcisinforno/wp-content/uploads/2021/03/Carbonara-ricetta-5328.jpg" alt="">
 
+
+        <!-- ============================================= -->
+        <!-- SEZIONE 4: Immagini da URL esterno            -->
+        <!-- ============================================= -->
+
+        <!-- Immagini singole (una sotto l'altra) -->
+        <img src="https://blog.giallozafferano.it/dulcisinforno/wp-content/uploads/2021/03/Carbonara-ricetta-5328.jpg" alt="Piatto di carbonara">
+        <img src="https://blog.giallozafferano.it/dulcisinforno/wp-content/uploads/2021/03/Carbonara-ricetta-5328.jpg" alt="Piatto di carbonara">
+
+        <!-- Immagini incapsulate in div (utile per stilizzare con CSS) -->
         <div>
-            <img src="https://blog.giallozafferano.it/dulcisinforno/wp-content/uploads/2021/03/Carbonara-ricetta-5328.jpg" alt="">
+            <img src="https://blog.giallozafferano.it/dulcisinforno/wp-content/uploads/2021/03/Carbonara-ricetta-5328.jpg" alt="Piatto di carbonara">
         </div>
 
         <div>
-            <img src="https://blog.giallozafferano.it/dulcisinforno/wp-content/uploads/2021/03/Carbonara-ricetta-5328.jpg" alt="">
+            <img src="https://blog.giallozafferano.it/dulcisinforno/wp-content/uploads/2021/03/Carbonara-ricetta-5328.jpg" alt="Piatto di carbonara">
         </div>
+
     </body>
 </html>
